@@ -1,0 +1,96 @@
+body {
+  background: url("./images/2.png");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.boton-menuBurguerLeon {
+  display: none;
+  cursor: pointer;
+  border: none;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.boton-menuBurguerLeon:focus {
+  outline: none;
+}
+
+.boton-menuBurguerLeon span {
+  display: block;
+  background-color: #fff;
+  height: 3px;
+  width: 30px;
+  margin: 7px auto;
+  border-radius: 2px;
+  opacity: 1;
+  transition: all 1s;
+}
+.container-menuBurguerLeon.active {
+  transform: translate(0px, 0px);
+  transition: transform 1s;
+}
+.br-1.cruz {
+  transform: rotate(-45deg) translate(-15px, -1px);
+  transition: transform 1s;
+}
+.br-2.cruz {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.br-3.cruz {
+  transform: rotate(45deg) translate(-15px, 0px);
+  transition: transform 1s;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .container-menuBurguerLeon li {
+    padding: 10px 40px;
+    list-style-type: none;
+    transition: 0.3s;
+  }
+  .container-menuBurguerLeon li a {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 600;
+  }
+  .container-menuBurguerLeon li:hover {
+    background-color: blue;
+  }
+
+  .container-menuBurguerLeon {
+    display: flex;
+    background-color: red;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    transform: translate(0px, -100%);
+  }
+  .container-menuBurguerLeon li {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+  .boton-menuBurguerLeon {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+  }
+}
+
+/* @keyframes opacidad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+} */
